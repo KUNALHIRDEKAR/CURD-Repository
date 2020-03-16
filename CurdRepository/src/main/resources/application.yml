@@ -1,0 +1,24 @@
+#server port number
+server:
+  port: 2216
+
+#View Resolver  
+#Spring connection pooling
+spring:
+  mvc:
+    view:
+      prefix: /view/
+      suffix: .jsp
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:orcl
+    username: scott
+    password: tiger
+  
+  jpa:
+    show-sql: true
+    database-platform: org.hibernate.dialect.Oracle10gDialect
+    hibernate:
+      ddl-auto: update
+  
+        
